@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+  May Node and Express be with you.
+
+  <ul class="points">
+  <% for(var i=0; i<points.length; i++) {%>
+    <li class="quote">
+      <span><%= points[i].name %></span>
+      <span><%= points[i].point %></span>
+      <span><%= points[i].date %></span>
+    </li>
+  <% } %>
+  </ul>
+  <form action="/points" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="point" name="point">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
